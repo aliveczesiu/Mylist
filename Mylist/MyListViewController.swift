@@ -12,8 +12,14 @@ class MyListViewController: UITableViewController {
 
     var itemArray = ["Buy Eggs", "Buy Tomatos", "Buy Bread"]
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let items = defaults.array(forKey: "My List Array") as? [String] {
+            itemArray = items 
+        }
     }
 //MARK - TableView datasource methods
    
@@ -55,6 +61,8 @@ class MyListViewController: UITableViewController {
             //What will happen once the user clicks the Add Item button on our IUAlert
             
             self.itemArray.append(textField.text!)
+            
+            self.defaults.set(self.itemArray, forKey: "My List Array")
             
             self.tableView.reloadData()
         }
