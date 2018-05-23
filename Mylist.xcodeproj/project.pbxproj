@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091A51C296B9389544141209 /* Pods_Mylist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9014F93E79A4F79AE4033B3 /* Pods_Mylist.framework */; };
 		AA1FBBA5209F2B98002A7939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1FBBA4209F2B98002A7939 /* AppDelegate.swift */; };
 		AA1FBBA7209F2B98002A7939 /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1FBBA6209F2B98002A7939 /* MyListViewController.swift */; };
 		AA1FBBAA209F2B98002A7939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1FBBA8209F2B98002A7939 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D549AD4FB17CF3BF708E8C6 /* Pods-Mylist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mylist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mylist/Pods-Mylist.debug.xcconfig"; sourceTree = "<group>"; };
+		1618892BF9D2AF1F6C40BD91 /* Pods-Mylist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mylist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mylist/Pods-Mylist.release.xcconfig"; sourceTree = "<group>"; };
 		AA1FBBA1209F2B98002A7939 /* Mylist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mylist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1FBBA4209F2B98002A7939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1FBBA6209F2B98002A7939 /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		AA1FBBB0209F2B99002A7939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AACDF89A20B19AD900BE99B4 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		AAF2542220A87BB800688C01 /* Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data Model.xcdatamodel"; sourceTree = "<group>"; };
+		C9014F93E79A4F79AE4033B3 /* Pods_Mylist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mylist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091A51C296B9389544141209 /* Pods_Mylist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CFAD11F251D0416BE5663CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D549AD4FB17CF3BF708E8C6 /* Pods-Mylist.debug.xcconfig */,
+				1618892BF9D2AF1F6C40BD91 /* Pods-Mylist.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		780FF09D6FD55495C452C05C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9014F93E79A4F79AE4033B3 /* Pods_Mylist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA1FBB98209F2B98002A7939 = {
 			isa = PBXGroup;
 			children = (
 				AA1FBBA3209F2B98002A7939 /* Mylist */,
 				AA1FBBA2209F2B98002A7939 /* Products */,
+				1CFAD11F251D0416BE5663CB /* Pods */,
+				780FF09D6FD55495C452C05C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA1FBBB3209F2B99002A7939 /* Build configuration list for PBXNativeTarget "Mylist" */;
 			buildPhases = (
+				3537BFFC613690E45B059C9B /* [CP] Check Pods Manifest.lock */,
 				AA1FBB9D209F2B98002A7939 /* Sources */,
 				AA1FBB9E209F2B98002A7939 /* Frameworks */,
 				AA1FBB9F209F2B98002A7939 /* Resources */,
+				9F1783077376EB10CC2722E5 /* [CP] Embed Pods Frameworks */,
+				49D8EB3A0F4C06D27ACC6D20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3537BFFC613690E45B059C9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mylist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49D8EB3A0F4C06D27ACC6D20 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mylist/Pods-Mylist-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F1783077376EB10CC2722E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mylist/Pods-Mylist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mylist/Pods-Mylist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA1FBB9D209F2B98002A7939 /* Sources */ = {
@@ -318,15 +401,13 @@
 		};
 		AA1FBBB4209F2B99002A7939 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D549AD4FB17CF3BF708E8C6 /* Pods-Mylist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQ8T66YCD2;
 				INFOPLIST_FILE = Mylist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SynowiecKrzysztof.Mylist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -336,15 +417,13 @@
 		};
 		AA1FBBB5209F2B99002A7939 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1618892BF9D2AF1F6C40BD91 /* Pods-Mylist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQ8T66YCD2;
 				INFOPLIST_FILE = Mylist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SynowiecKrzysztof.Mylist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
