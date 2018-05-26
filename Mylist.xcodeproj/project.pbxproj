@@ -13,8 +13,9 @@
 		AA1FBBAA209F2B98002A7939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1FBBA8209F2B98002A7939 /* Main.storyboard */; };
 		AA1FBBAC209F2B99002A7939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1FBBAB209F2B99002A7939 /* Assets.xcassets */; };
 		AA1FBBAF209F2B99002A7939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1FBBAD209F2B99002A7939 /* LaunchScreen.storyboard */; };
+		AA280A0820B5DA2500C0EAC1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA280A0720B5DA2500C0EAC1 /* Item.swift */; };
+		AA280A0A20B5DA3000C0EAC1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA280A0920B5DA3000C0EAC1 /* Category.swift */; };
 		AACDF89B20B19AD900BE99B4 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDF89A20B19AD900BE99B4 /* CategoryViewController.swift */; };
-		AAF2542320A87BB800688C01 /* Data Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAF2542120A87BB800688C01 /* Data Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,9 @@
 		AA1FBBAB209F2B99002A7939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1FBBAE209F2B99002A7939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA1FBBB0209F2B99002A7939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA280A0720B5DA2500C0EAC1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		AA280A0920B5DA3000C0EAC1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AACDF89A20B19AD900BE99B4 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		AAF2542220A87BB800688C01 /* Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data Model.xcdatamodel"; sourceTree = "<group>"; };
 		C9014F93E79A4F79AE4033B3 /* Pods_Mylist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mylist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,7 +97,8 @@
 		AAF2541D20A700AD00688C01 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				AAF2542120A87BB800688C01 /* Data Model.xcdatamodeld */,
+				AA280A0920B5DA3000C0EAC1 /* Category.swift */,
+				AA280A0720B5DA2500C0EAC1 /* Item.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -256,10 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA280A0820B5DA2500C0EAC1 /* Item.swift in Sources */,
 				AACDF89B20B19AD900BE99B4 /* CategoryViewController.swift in Sources */,
 				AA1FBBA7209F2B98002A7939 /* MyListViewController.swift in Sources */,
-				AAF2542320A87BB800688C01 /* Data Model.xcdatamodeld in Sources */,
 				AA1FBBA5209F2B98002A7939 /* AppDelegate.swift in Sources */,
+				AA280A0A20B5DA3000C0EAC1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +411,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQ8T66YCD2;
 				INFOPLIST_FILE = Mylist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SynowiecKrzysztof.Mylist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -423,7 +430,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HQ8T66YCD2;
 				INFOPLIST_FILE = Mylist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.SynowiecKrzysztof.Mylist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -453,19 +463,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AAF2542120A87BB800688C01 /* Data Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AAF2542220A87BB800688C01 /* Data Model.xcdatamodel */,
-			);
-			currentVersion = AAF2542220A87BB800688C01 /* Data Model.xcdatamodel */;
-			path = "Data Model.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AA1FBB99209F2B98002A7939 /* Project object */;
 }
